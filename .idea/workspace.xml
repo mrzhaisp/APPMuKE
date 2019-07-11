@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f992d4c3-871d-4dff-ac9e-6be33efca858" name="Default Changelist" comment="" />
+    <list default="true" id="f992d4c3-871d-4dff-ac9e-6be33efca858" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_app.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,10 +17,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="68" column="11" lean-forward="true" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
+            <state relative-caret-position="275">
+              <caret line="130" column="74" selection-start-line="130" selection-start-column="74" selection-end-line="130" selection-end-column="74" />
               <folding>
                 <element signature="e#46#78#0" expanded="true" />
+                <element signature="e#119#1106#0" />
+                <element signature="e#501#589#0" />
+                <element signature="e#808#910#0" />
+                <element signature="e#1116#1252#0" />
+                <element signature="e#1361#1531#0" />
+                <element signature="e#1552#1752#0" />
+                <element signature="e#1773#1983#0" />
+                <element signature="e#2003#2181#0" />
+                <element signature="e#2003#2060#1" />
+                <element signature="e#2100#2268#0" />
+                <element signature="e#2298#2534#0" />
+                <element signature="e#2409#2950#0" />
               </folding>
             </state>
           </provider>
@@ -34,10 +50,16 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>dr</find>
+      <find>self</find>
+      <find>getSize</find>
     </findStrings>
     <replaceStrings>
       <replace>driver</replace>
+      <replace>get_size</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/run_app.py" root0="SKIP_INSPECTION" />
@@ -50,11 +72,12 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1939" />
-    <option name="y" value="-16" />
+    <option name="x" value="1955" />
+    <option name="y" value="-10" />
     <option name="width" value="1873" />
     <option name="height" value="1091" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -75,6 +98,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -132,19 +156,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562816229569</updated>
-      <workItem from="1562816230785" duration="4014000" />
+      <workItem from="1562816230785" duration="17436000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4014000" />
+    <option name="totallyTimeSpent" value="17436000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12285408" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.020386266" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -154,7 +178,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18249734" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27991453" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -170,15 +194,34 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/APPMuKE$run_app.coverage" NAME="run_app Coverage Results" MODIFIED="1562824013748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/APPMuKE$run_app.coverage" NAME="run_app Coverage Results" MODIFIED="1562837828474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/run_app.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/site-packages/selenium/webdriver/remote/errorhandler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
-          <caret line="68" column="11" lean-forward="true" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
+          <caret line="241" selection-start-line="241" selection-end-line="241" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="130" column="74" selection-start-line="130" selection-start-column="74" selection-end-line="130" selection-end-column="74" />
           <folding>
             <element signature="e#46#78#0" expanded="true" />
+            <element signature="e#119#1106#0" />
+            <element signature="e#501#589#0" />
+            <element signature="e#808#910#0" />
+            <element signature="e#1116#1252#0" />
+            <element signature="e#1361#1531#0" />
+            <element signature="e#1552#1752#0" />
+            <element signature="e#1773#1983#0" />
+            <element signature="e#2003#2181#0" />
+            <element signature="e#2003#2060#1" />
+            <element signature="e#2100#2268#0" />
+            <element signature="e#2298#2534#0" />
+            <element signature="e#2409#2950#0" />
           </folding>
         </state>
       </provider>
