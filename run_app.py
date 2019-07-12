@@ -126,6 +126,7 @@ def login_by_node():
 	elements[1].send_keys("CMcc@121122")
 
 def login_by_uiautomater():
+	""""""
 	driver.find_element_by_android_uiautomator('new UiSelector().text("手机号/邮箱")').clear()
 	driver.find_element_by_android_uiautomator('new UiSelector().text("手机号/邮箱")').send_keys("18141923568")
 	driver.find_element_by_android_uiautomator('new UiSelector().resourceId("cn.com.open.mooc:id/passwordEdit")').send_keys("18141923568")
