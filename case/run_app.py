@@ -1,12 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from appium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time as t
+from util.get_by_local import GetByLocal
+
 def get_driver():
 	desired_caps = {}
 	desired_caps['platformName'] = "Android"  # 声明是ios还是Andriveroid系统
 	# desired_caps['platformVersion'] = '6.0.1'  # mumuAndriveroid内核版本号，可以在夜神模拟器设置中查看
 	desired_caps['platformVersion'] = '5.1.1'  # mumuAndriveroid内核版本号，可以在夜神模拟器设置中查看
+	# desired_caps['automationName'] = 'UiAutomator2'
 	# desired_caps['deviceName'] = '127.0.0.1:7555'  # 连接的设备名称  mumu
 	desired_caps['deviceName'] = '127.0.0.1:21503'  # 连接的设备名称 逍遥
 	# desired_caps['app'] = 'C:\\Users\\TestSuit\Apptest\\imooc7.2.010102001andriveroid.apk'
@@ -84,21 +89,11 @@ def go_login():
 	#登录进去点击账号”
 	driver.find_element_by_xpath("//*[@text='账号']").click()
 	# 点击去登陆
+	t.sleep(1)
 	driver.find_element_by_xpath("//*[@text='点击登录']").click()
 	#跳转到注册页面 右上角的登录
-	driver.find_element_by_id("cn.com.open.mooc:id/right_text").click()
-
-def login():
-	"""ID和 xpath 登录页面"""
-
-	#清空账户框
-	driver.find_element_by_id("cn.com.open.mooc:id/accountEdit").click()
-	driver.find_element_by_id("cn.com.open.mooc:id/accountEdit").send_keys("18141923568")
-	#清空密码框
-	driver.find_element_by_id("cn.com.open.mooc:id/passwordEdit").clear()
-	driver.find_element_by_id("cn.com.open.mooc:id/passwordEdit").send_keys("Cmcc@121122")
-	#登录按钮
-	driver.find_element_by_id("cn.com.open.mooc:id/loginLabel").click()
+	t.sleep(1)
+	driver.find_element_by_xpath("//*[@text='登录']").click()
 
 def login_by_class():
 	#找到登录框的classname
@@ -107,7 +102,7 @@ def login_by_class():
 	elements = driver.find_elements_by_class_name("android.widget.EditText")
 	# print(len(elements))   #一共有两个根据下标去取
 	elements[0].send_keys("18141923568")
-	# t.sleep(1)
+	t.sleep(1)
 	elements[1].send_keys("Cmcc@121122")
 	#寻找登录按钮为  classname为“android.widget.RelativeLayout”的按钮  有五个  费劲
 	elementsTwo = driver.find_elements_by_class_name("android.widget.RelativeLayout")
@@ -131,12 +126,35 @@ def login_by_uiautomater():
 	driver.find_element_by_android_uiautomator('new UiSelector().text("手机号/邮箱")').send_keys("18141923568")
 	driver.find_element_by_android_uiautomator('new UiSelector().resourceId("cn.com.open.mooc:id/passwordEdit")').send_keys("18141923568")
 
+def login_by_xpath():
+	driver.find_element_by_xpath("@id='cn.com.open.mooc:id/loginLabel'/../preceding-sibling::android.widget.EditText[0]").send_keys("18141923569")
+
+def get_toust():
+	"""拿到弹框toast"""
+	#现在整个页面定位找到关键字“登录密码错误”，再用slenium中的查找元素  间隔0.1s在页面上查找这个元素
+	tost_element = ("xpath","//*[coatains(@text='登录密码错误')]")
+	print(WebDriverWait(driver,10,0.1).until(EC.presence_of_all_elements_located(tost_element)))
+
+def login():
+	"""ID和 xpath 登录页面"""
+	#清空账户框
+	# driver.find_element_by_id("cn.com.open.mooc:id/accountEdit").send_keys("18141923568")
+	# #清空密码框
+	# driver.find_element_by_id("cn.com.open.mooc:id/passwordEdit").send_keys("Cmcc@121122")
+	# #登录按钮
+	# driver.find_element_by_id("cn.com.open.mooc:id/loginLabel").click()
+	g = GetByLocal(driver)
+	g.get_element("username").send_keys("18141923568")
+	t.sleep(1)
+	g.get_element("passwd").send_keys("Cmcc@121122")
+	t.sleep(1)
+	g.get_element("login_btn").click()
+
 driver = get_driver()
 go_login()
-login_by_uiautomater()
-# login_by_class()
-# login_by_class()
+login()
 # login()
+
 
 
 
