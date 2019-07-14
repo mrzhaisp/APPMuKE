@@ -84,17 +84,6 @@ def swip_on(direction):
     else:
         swip_right()
 
-def go_login():
-	"""点击到登录页面"""
-	#登录进去点击账号”
-	driver.find_element_by_xpath("//*[@text='账号']").click()
-	# 点击去登陆
-	t.sleep(1)
-	driver.find_element_by_xpath("//*[@text='点击登录']").click()
-	#跳转到注册页面 右上角的登录
-	t.sleep(1)
-	driver.find_element_by_xpath("//*[@text='登录']").click()
-
 def login_by_class():
 	#找到登录框的classname
 	# print(element)
@@ -134,6 +123,17 @@ def get_toust():
 	#现在整个页面定位找到关键字“登录密码错误”，再用slenium中的查找元素  间隔0.1s在页面上查找这个元素
 	tost_element = ("xpath","//*[coatains(@text='登录密码错误')]")
 	print(WebDriverWait(driver,10,0.1).until(EC.presence_of_all_elements_located(tost_element)))
+
+def go_login():
+	"""点击到登录页面"""
+	#登录进去点击账号”
+	driver.find_element_by_xpath("//*[@text='账号']").click()
+	# 点击去登陆
+	t.sleep(1)
+	driver.find_element_by_xpath("//*[@text='点击登录']").click()
+	#跳转到注册页面 右上角的登录
+	t.sleep(1)
+	driver.find_element_by_xpath("//*[@text='登录']").click()
 
 def login():
 	"""ID和 xpath 登录页面"""
